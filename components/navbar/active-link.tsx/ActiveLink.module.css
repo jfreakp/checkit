@@ -1,0 +1,9 @@
+@reference "../../../app/globals.css";
+
+.link {
+    @apply text-sm font-bold text-corporate-heading hover:text-primary transition-colors underline-offset-4;
+}
+
+.active-link {
+    @apply text-sm font-bold text-primary;
+}

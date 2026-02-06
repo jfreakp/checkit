@@ -1,26 +1,57 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* DESIGN TOKENS */
+@theme {
+
+  /* COLORS */
+  --color-primary: #EC5A29;
+  --color-background-light: #fcfcfc;
+  --color-corporate-heading: #1A1A1A;
+  --color-corporate-accent: #575756;
+  --color-brand-gray: #4A4A49;
+
+  /* FONTS */
+  --font-display: "Manrope", sans-serif;
+  --font-mono: "Fira Code", monospace;
+
+  /* BORDER RADIUS */
+  --radius-default: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* BASE STYLES */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-display);
+  background: var(--color-background-light);
+}
+
+/* CUSTOM UTILITIES */
+@utility code-snippet {
+  font-family: var(--font-mono);
+}
+
+/* DECORATION CLASSES */
+.brand-wave-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 300px;
+  background: linear-gradient(135deg, transparent 50%, #EC5A29 50%, #EC5A29 70%, #4A4A49 70%);
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+  border-radius: 0 0 0 100%;
+}
+
+.brand-wave-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30%;
+  height: 200px;
+  background: linear-gradient(45deg, #4A4A49 20%, #EC5A29 20%, #EC5A29 50%, transparent 50%);
+  opacity: 0.0;
 }
