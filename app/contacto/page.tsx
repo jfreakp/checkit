@@ -1,4 +1,36 @@
+"use client";
 export default function ContactoPage() {
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        const formData = new FormData(e.currentTarget);
+
+        const data = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            project_type: formData.get("project_type"),
+            budget: formData.get("budget"),
+            message: formData.get("message"),
+        };
+
+        const res = await fetch("/api/send-email", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+            alert("Consulta enviada 🚀");
+            e.currentTarget.reset();
+        } else {
+            alert("Error enviando la consulta");
+        }
+    };
+
+
     return (
         <main className="flex-1 mx-auto max-w-[1200px] w-full px-6 md:px-20 lg:px-10 py-12 md:py-20">
             <div className="mb-16 text-center lg:text-left">
@@ -66,7 +98,7 @@ export default function ContactoPage() {
                 <div className="lg:col-span-7 bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100">
                     <h2 className="text-2xl font-bold mb-2 text-gray-900">Iniciar Consulta de Proyecto</h2>
                     <p className="text-gray-500 mb-8">Danos los detalles básicos para asignar al arquitecto de software adecuado.</p>
-                    <form action="#" className="space-y-6" method="POST">
+                    <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
                                 <label className="text-sm font-semibold text-gray-700" htmlFor="name">Nombre / Empresa</label>
