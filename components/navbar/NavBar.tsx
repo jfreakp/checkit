@@ -5,6 +5,7 @@ import { ActiveLink } from "./active-link.tsx/ActiveLink"
 
 const navItems = [
     { path: "/", text: "Inicio" },
+    { path: "/servicios", text: "Servicios" },
     { path: "/about", text: "Acerca de" },
     { path: "/contacto", text: "Contacto" },
 ]
@@ -16,7 +17,7 @@ export const NavBar = () => {
         <div>
             <div className="md:hidden w-full">
                 <button
-                    className="p-2 focus:outline-none w-full bg-white border-b border-gray-200 justify-end flex"
+                    className="p-2 focus:outline-none w-full bg-white border-b border-gray-200 justify-end flex shadow-sm"
                     onClick={() => setOpen(!open)}
                     aria-label="Abrir menú"
                 >
@@ -41,7 +42,7 @@ export const NavBar = () => {
             </div>
             <div>
                 {/* ✅ DESKTOP */}
-                <nav className="hidden md:flex gap-6 items-center justify-center bg-white h-14">
+                <nav className="bg-transparent hidden md:flex gap-6 items-center justify-center bg-white h-14">
                     {navItems.map((item) => (
                         <ActiveLink
                             key={item.path}

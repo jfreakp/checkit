@@ -1,3 +1,20 @@
+import CardEmpresas from "@/components/home/CardEmpresas";
+
+const itemsEmpresas = [
+  {
+    src: "/img/home/empresas/bdl.png",
+    alt: "Banco de Loja",
+    width: 200,
+    height: 50,
+  },
+  {
+    src: "/img/home/empresas/cacpe.png",
+    alt: "Cacpe Loja",
+    width: 200,
+    height: 50,
+  }
+]
+
 export default function Home() {
   return (
     <main className="relative">
@@ -75,23 +92,18 @@ export default function Home() {
       <section className="py-12 bg-white/50 backdrop-blur-sm border-y border-corporate-accent/5">
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-center text-xs font-bold text-brand-gray/60 uppercase tracking-[0.3em] mb-10">Empresas que confían en nosotros</p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 grayscale opacity-40">
-            <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-3xl">corporate_fare</span>
-              <span className="font-bold text-xl tracking-tighter">CLIENTE ALFA</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-3xl">business</span>
-              <span className="font-bold text-xl tracking-tighter">TECH SOLUTIONS</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-3xl">account_balance</span>
-              <span className="font-bold text-xl tracking-tighter">GLOBAL BANK</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-3xl">precision_manufacturing</span>
-              <span className="font-bold text-xl tracking-tighter">NEXUS IND</span>
-            </div>
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
+            {
+              itemsEmpresas.map((item, index) => (
+                <CardEmpresas
+                  key={index}
+                  src={item.src}
+                  alt={item.alt}
+                  width={item.width}
+                  height={item.height}
+                />
+              ))
+            }
           </div>
         </div>
       </section>
