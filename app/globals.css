@@ -78,4 +78,27 @@ body {
 }
 
 
+#nprogress .bar {
+  background: #EC5A29 !important; /* tu color primary */
+  height: 3px;
+}
+
+#nprogress .peg {
+  box-shadow: 0 0 10px #EC5A29, 0 0 5px #EC5A29;
+}
+
+/* Centrar el spinner de NProgress y personalizar color */
+#nprogress .spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+#nprogress .spinner-icon {
+  border-top-color: #EC5A29 !important; /* primary */
+  border-left-color: #EC5A29 !important; /* primary */
+  width: 60px;
+  height: 60px;
+  border-width: 6px;
+}
 

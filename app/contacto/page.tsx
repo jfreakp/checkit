@@ -1,42 +1,51 @@
 "use client";
 
 import NProgress from "nprogress";
+import React from "react";
 import { toast } from "sonner";
 
 export default function ContactoPage() {
+    const [loading, setLoading] = React.useState(false);
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-
+        setLoading(true);
         NProgress.start();
 
-        const formData = new FormData(e.currentTarget);
+        try {
+            const formData = new FormData(e.currentTarget);
 
-        const data = {
-            name: formData.get("name"),
-            email: formData.get("email"),
-            project_type: formData.get("project_type"),
-            budget: formData.get("budget"),
-            message: formData.get("message"),
-        };
+            const data = {
+                name: formData.get("name"),
+                email: formData.get("email"),
+                project_type: formData.get("project_type"),
+                budget: formData.get("budget"),
+                message: formData.get("message"),
+            };
 
-        const res = await fetch("/api/send-email", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-        });
+            const res = await fetch("/api/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            });
 
-        if (res.ok) {
-            toast.success("Correo enviado correctamente 📩");
-            e.currentTarget.reset();
-        } else {
-            toast.error("Error enviando la consulta");
+            if (res.ok) {
+                toast.success("Correo enviado correctamente 📩");
+                if (e.currentTarget && typeof e.currentTarget.reset === "function") {
+                    e.currentTarget.reset();
+                }
+            } else {
+                toast.error("Error enviando la consulta");
+            }
+        } catch (error) {
+            toast.error("Ocurrió un error inesperado");
+        } finally {
+            NProgress.done();
+            setLoading(false);
         }
-        NProgress.done();
     };
-
 
     return (
         <main className="flex-1 mx-auto max-w-[1200px] w-full px-6 md:px-20 lg:px-10 py-12 md:py-20">
@@ -144,7 +153,8 @@ export default function ContactoPage() {
                             <label className="text-sm font-semibold text-gray-700" htmlFor="message">Alcance del Proyecto</label>
                             <textarea className="w-full px-4 py-3 rounded-xl border border-[#A6A6A6] bg-transparent focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-gray-900 form-input-custom resize-none" id="message" name="message" placeholder="Describe brevemente las funcionalidades clave que necesitas..." rows={4}></textarea>
                         </div>
-                        <button className="w-full bg-[#EC5A29] hover:bg-[#d44d21] text-white py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-primary/30 flex items-center justify-center gap-2 group" type="submit">
+                        <button className="w-full bg-[#EC5A29] hover:bg-[#d44d21] text-white py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-primary/30 flex items-center justify-center gap-2 group" type="submit"
+                            disabled={loading}>
                             Enviar Consulta
                             <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">rocket_launch</span>
                         </button>
