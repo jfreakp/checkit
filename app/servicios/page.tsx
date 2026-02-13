@@ -1,4 +1,15 @@
 import { Servicios } from "@/components/servicios/Servicios";
+import { Card } from '../../components/servicios/Card';
+import { CardEnviarEncuesta } from "@/sharing/components/CardEnviarEncuesta";
+
+const infoCard = {
+    title1: "Tienes un ",
+    title2: "proyecto",
+    title3: " en mente?",
+    description: "Hablemos sobre cómo nuestras soluciones pueden llevar tu negocio al siguiente nivel digital.",
+    primaryActionText: "Contactar ahora",
+    secondaryActionText: "Agendar reunión"
+};
 
 export default function ServiciosPage() {
     return (
@@ -19,24 +30,14 @@ export default function ServiciosPage() {
                     <Servicios />
                 </div>
             </main>
-            <section className="bg-secondary dark:bg-zinc-900 py-16">
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl font-bold text-white mb-6">¿Tienes un proyecto en mente?</h2>
-                    <p className="text-gray-300 mb-10 text-lg">
-                        Hablemos sobre cómo nuestras soluciones pueden llevar tu negocio al siguiente nivel digital.
-                    </p>
-                    <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                        <a className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-orange-600 text-white font-bold rounded-xl transition-all shadow-xl shadow-orange-500/10 flex items-center justify-center gap-2" href="mailto:hola@checkti.com">
-                            <span className="material-symbols-outlined">mail</span>
-                            Contactar ahora
-                        </a>
-                        <a className="w-full sm:w-auto px-8 py-4 border border-white/20 hover:bg-white/5 text-white font-bold rounded-xl transition-all flex items-center justify-center gap-2" href="#">
-                            <span className="material-symbols-outlined">calendar_month</span>
-                            Agendar reunión
-                        </a>
-                    </div>
-                </div>
-            </section>
+            <CardEnviarEncuesta
+                title1={infoCard.title1}
+                title2={infoCard.title2}
+                title3={infoCard.title3}
+                description={infoCard.description}
+                primaryActionText={infoCard.primaryActionText}
+                secondaryActionText={infoCard.secondaryActionText}
+            />
         </>
 
     );
