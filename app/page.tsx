@@ -19,10 +19,10 @@ const itemsEmpresas = [
 ]
 
 const infoCard = {
-    title1: "¿Listo para construir confianza?",
-    title2: "futuro",
-    title3: "de tu empresa?",
-    description: "Conversemos sobre cómo CheckTI puede ayudarte a escalar tus soluciones digitales con un equipo que entiende tus necesidades.",
+    title1: "¿Tu visión merece el mejor ",
+    title2: "código",
+    title3: "?",
+    description: "No arriesgues tu inversión con soluciones a medias. Construye sobre bases sólidas con el equipo experto de CheckTI.",
     primaryActionText: "Agendar Consultoría",
     secondaryActionText: "Nuestra Metodología"
 };

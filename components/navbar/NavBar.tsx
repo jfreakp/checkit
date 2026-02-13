@@ -5,8 +5,8 @@ import { ActiveLink } from "./active-link.tsx/ActiveLink"
 
 const navItems = [
     { path: "/", text: "Inicio" },
-    { path: "/servicios", text: "Servicios" },
-    { path: "/about", text: "Acerca de" },
+    { path: "/about", text: "Quienes Somos" },
+    { path: "/servicios", text: "Servicios" },    
     { path: "/contacto", text: "Contacto" },
 ]
 
