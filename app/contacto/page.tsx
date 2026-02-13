@@ -66,7 +66,7 @@ export default function ContactoPage() {
                                 </div>
                                 <div>
                                     <p className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-1">Consultas Técnicas</p>
-                                    <p className="text-lg font-semibold text-gray-800">proyectos@checkit.com</p>
+                                    <p className="text-lg font-semibold text-gray-800">proyectos@checkti.com</p>
                                     <p className="text-sm text-gray-500">Recibe una estimación inicial en 24h</p>
                                 </div>
                             </div>
