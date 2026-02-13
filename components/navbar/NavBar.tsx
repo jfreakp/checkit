@@ -17,7 +17,7 @@ export const NavBar = () => {
         <div>
             <div className="md:hidden w-full">
                 <button
-                    className="p-2 focus:outline-none w-full bg-white border-b border-gray-200 justify-end flex shadow-sm"
+                    className="p-2 focus:outline-none w-full color-background-light border-b border-gray-200 justify-end flex shadow-sm"
                     onClick={() => setOpen(!open)}
                     aria-label="Abrir menú"
                 >
@@ -28,7 +28,7 @@ export const NavBar = () => {
                     </div>
                 </button>
                 {open && (
-                    <nav className="absolute left-0 top-[56px] w-full flex flex-col gap-4 bg-white shadow z-50 p-4">
+                    <nav className="absolute left-0 top-[56px] w-full flex flex-col gap-4 color-background-light shadow z-50 p-4">
                         {navItems.map((item) => (
                             <ActiveLink
                                 key={item.path}
@@ -42,7 +42,7 @@ export const NavBar = () => {
             </div>
             <div>
                 {/* ✅ DESKTOP */}
-                <nav className="bg-transparent hidden md:flex gap-6 items-center justify-center bg-white h-14">
+                <nav className="bg-transparent hidden md:flex gap-6 items-center justify-center color-background-light h-14">
                     {navItems.map((item) => (
                         <ActiveLink
                             key={item.path}
