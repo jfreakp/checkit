@@ -27,9 +27,22 @@ export const CardEnviarEncuesta = ({
                         <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-lg md:text-xl">
                             {description}
                         </p>
-                        <Link className="bg-primary text-white px-12 py-5 rounded-xl font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-primary/40" href="/contacto" >
+                        <Link
+                            className="
+                              bg-primary text-white 
+                              px-6 py-3 text-base
+                              sm:px-8 sm:py-4 sm:text-lg
+                              md:px-12 md:py-5 md:text-xl
+                              rounded-xl font-bold 
+                              hover:scale-105 transition-transform 
+                              shadow-2xl shadow-primary/40
+                              inline-block text-center
+                            "
+                            href="/contacto"
+                        >
                             {primaryActionText}
                         </Link>
+
                     </div>
                 </div>
             </div>
