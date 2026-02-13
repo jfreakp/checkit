@@ -1,9 +1,9 @@
 @reference "../../../app/globals.css";
 
 .link {
-    @apply text-sm md:text-lg lg:text-2xl font-bold text-corporate-heading hover:text-primary transition-colors underline-offset-4;
+    @apply text-sm md:text-sm lg:text-lg font-bold text-corporate-heading hover:text-primary transition-colors underline-offset-4;
 }
 
 .active-link {
-    @apply text-sm md:text-lg lg:text-2xl font-bold text-primary;
+    @apply text-sm md:text-sm lg:text-lg font-bold text-primary lg:bg-primary lg:text-white lg:rounded-full lg:px-6 lg:py-2 lg:shadow md:bg-primary md:text-white md:rounded-full md:px-6 md:py-2 md:shadow;
 }

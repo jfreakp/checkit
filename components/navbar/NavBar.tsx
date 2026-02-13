@@ -2,19 +2,30 @@
 'use client';
 import { useState } from "react";
 import { ActiveLink } from "./active-link.tsx/ActiveLink"
+import { Plus_Jakarta_Sans } from "next/font/google";
 
 const navItems = [
     { path: "/", text: "Inicio" },
     { path: "/about", text: "Quienes Somos" },
     { path: "/servicios", text: "Servicios" },
+    { path: "/aplicaciones", text: "Aplicaciones" },
     { path: "/contacto", text: "Contacto" },
 ]
+
+
+
+const plusJakarta = Plus_Jakarta_Sans({
+    subsets: ["latin"],
+    weight: ["400", "700"],
+    display: "swap",
+});
+
 
 export const NavBar = () => {
     const [open, setOpen] = useState(false);
 
     return (
-        <div>
+        <div className={plusJakarta.className}>
             <div className="md:hidden w-full">
                 <button
                     className="p-2 focus:outline-none w-full bg-white border-b border-gray-200 justify-end flex shadow-sm"
@@ -42,15 +53,13 @@ export const NavBar = () => {
             </div>
             <div>
                 {/* ✅ DESKTOP */}
-                <nav className="bg-transparent hidden md:flex gap-12 items-center justify-center color-background-light h-14">
+                <nav className="bg-transparent hidden md:flex md:gap-6 lg:gap-12 items-center justify-center color-background-light h-14">
                     {navItems.map((item) => (
-                        <>
-                            <ActiveLink
-                                key={item.path}
-                                path={item.path}
-                                text={item.text}
-                            />
-                        </>
+                        <ActiveLink
+                            key={item.path}
+                            path={item.path}
+                            text={item.text}
+                        />
                     ))}
                 </nav>
             </div>

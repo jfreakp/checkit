@@ -10,6 +10,11 @@
   --color-corporate-heading: #1A1A1A;
   --color-corporate-accent: #575756;
   --color-brand-gray: #4A4A49;
+  --color-background-dark: #221510;
+  --color-neutral-light: #fdfcfc;
+  --color-neutral-border: #e5e1e0;
+  --color-text-main: #2d1e18;
+  --color-text-muted: #6b5851;
 
   /* FONTS */
   --font-display: "Manrope", sans-serif;
@@ -21,6 +26,9 @@
   --radius-xl: 0.75rem;
   --radius-full: 9999px;
 }
+
+
+
 
 /* BASE STYLES */
 body {

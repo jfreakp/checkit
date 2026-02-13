@@ -1,4 +1,5 @@
 import { CardEnviarEncuesta } from "@/sharing/components/CardEnviarEncuesta";
+import { TeamCard } from '../../components/about/TeamCard';
 
 const infoCard = {
     title1: "Tienes un reto ",
@@ -95,64 +96,10 @@ export default function AboutPage() {
                             <p className="text-primary font-bold text-sm">Somos 25+ Especialistas remotos</p>
                         </div>
                     </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        <div className="group">
-                            <div className="relative mb-6 overflow-hidden rounded-2xl aspect-[1/1.2] shadow-sm">
-                                <img alt="Carlos Méndez, Arquitecto Lead" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX1Z-Vx_F66A1XXuBk5MBZAtaEZyo83M3cBsyEXTYHA7OD4liuSWSnjB4pqREHWTAiwYfD8IH9ePjbg_LbIqY_orhYBiTFzYsLa0ocjuHgIw-HqhBBxJPT3MDacPXGzizjzVCVgNWy0VYbz0qv3JNjAnkljHVeCr9t58rToMXpdIwT9id1GwAa7GNl1L6ifZ2006K6B3gKoQZJTQHVWYpvPVGMCopXf2-pv7wyiB0dOJ4DYN8i5UIjUDzYMeuVMqLRrzsTVo3lcFU" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-dark-accent/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                    <div className="flex gap-3">
-                                        <a className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-primary transition-colors" href="#">
-                                            <span className="material-symbols-outlined text-sm">code</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 className="text-dark-accent font-bold text-xl">Carlos Méndez</h3>
-                            <p className="text-primary text-sm font-bold uppercase tracking-widest mt-1">Lead Architect</p>
-                        </div>
-                        <div className="group">
-                            <div className="relative mb-6 overflow-hidden rounded-2xl aspect-[1/1.2] shadow-sm">
-                                <img alt="Ana Silva, Ingeniera Fullstack" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdxkD2RulBPVWy09oOTKKXGuLQ29vo4d0aSo7H7NwJZRW8oY3qppUnn8KoBCTktBto4Y3v3gQRTPTlrcyu41c3lu850zo98nZeb1y5WQZqmCJtDx8EOpnys9zuudMr2G-OrLq6tbbe1wEqvIX-0saF9IeEBSkOSn9tyeIJeIdf5ZCnKT3gO3Eh61K14zm8c_IWegePsBxAe7EU2KG1_Gats3Z-pLdZ_mzcHPdoUZcGBE2E1N97TJmEz_yoT4zYQEJVvGvgN-UPB0Y" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-dark-accent/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                    <div className="flex gap-3">
-                                        <a className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-primary transition-colors" href="#">
-                                            <span className="material-symbols-outlined text-sm">terminal</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 className="text-dark-accent font-bold text-xl">Ana Silva</h3>
-                            <p className="text-primary text-sm font-bold uppercase tracking-widest mt-1">Fullstack Engineer</p>
-                        </div>
-                        <div className="group">
-                            <div className="relative mb-6 overflow-hidden rounded-2xl aspect-[1/1.2] shadow-sm">
-                                <img alt="Luis Ortiz, Especialista DevOps" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCV57iL0U4ld2qgBd5P0GswriIjMgzRl5pD94p0nxTXMAp2L4y3mnYV6eNZsMacfBMH4CT-Yopn2rUaylHF1X0dfPD4NTqMB7IgT5dIT4qZSZ2vVZp-yx4qSxBf8pg8cXufv48vzb5m1mYdSqIdxj6lb1U59bInKArkZLltyVi406PImcsmblBdePheqJwmF3HFxw-3uuapnAS8Jcetj4exqOycHZG8_efI1YRsvnRGQBdtG84WH1LnC4bFOkqXkY-8c028QMMpQhU" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-dark-accent/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                    <div className="flex gap-3">
-                                        <a className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-primary transition-colors" href="#">
-                                            <span className="material-symbols-outlined text-sm">cloud_done</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 className="text-dark-accent font-bold text-xl">Luis Ortiz</h3>
-                            <p className="text-primary text-sm font-bold uppercase tracking-widest mt-1">DevOps Specialist</p>
-                        </div>
-                        <div className="group">
-                            <div className="relative mb-6 overflow-hidden rounded-2xl aspect-[1/1.2] shadow-sm">
-                                <img alt="Marta Jímenez, Ingeniera QA" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo7CIh0jeY_KsLrnMuz1YJR9Z5VrZj9CMlTN05OB1w_M-BuVPklmNCfn1PRrccYzk9cRNsdLpMjMm3_1yrVo4KeqKozc7HdT77lrTUqEDz2D7h60LeTuP1bNQ5EhDb4ZtIQF5I8-yIktJStVyRLb9nDAb23io5BTf103jVovMd6b208xEl2Ns_eybFCBosCmg-byTGyp9eZc1m1FkWW8pesHztnMTyMUwM5MgpXHvGGvma9BTOQDQbFO5TBTf_ictYbDAaF_jfVRc" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-dark-accent/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                    <div className="flex gap-3">
-                                        <a className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white hover:bg-primary transition-colors" href="#">
-                                            <span className="material-symbols-outlined text-sm">bug_report</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <h3 className="text-dark-accent font-bold text-xl">Marta Jímenez</h3>
-                            <p className="text-primary text-sm font-bold uppercase tracking-widest mt-1">QA Engineer</p>
-                        </div>
-                    </div>
+
+
+
+                    <TeamCard />
                 </div>
             </section>
             <CardEnviarEncuesta
