@@ -6,7 +6,7 @@ import { ActiveLink } from "./active-link.tsx/ActiveLink"
 const navItems = [
     { path: "/", text: "Inicio" },
     { path: "/about", text: "Quienes Somos" },
-    { path: "/servicios", text: "Servicios" },    
+    { path: "/servicios", text: "Servicios" },
     { path: "/contacto", text: "Contacto" },
 ]
 
@@ -42,13 +42,15 @@ export const NavBar = () => {
             </div>
             <div>
                 {/* ✅ DESKTOP */}
-                <nav className="bg-transparent hidden md:flex gap-6 items-center justify-center color-background-light h-14">
+                <nav className="bg-transparent hidden md:flex gap-12 items-center justify-center color-background-light h-14">
                     {navItems.map((item) => (
-                        <ActiveLink
-                            key={item.path}
-                            path={item.path}
-                            text={item.text}
-                        />
+                        <>
+                            <ActiveLink
+                                key={item.path}
+                                path={item.path}
+                                text={item.text}
+                            />
+                        </>
                     ))}
                 </nav>
             </div>

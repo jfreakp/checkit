@@ -18,5 +18,6 @@ export const ActiveLink = ({ path, text, onClick }: Props) => {
             onClick={onClick}>
             {text}
         </Link>
+        
     )
 }
