@@ -55,3 +55,26 @@ body {
   background: linear-gradient(45deg, #4A4A49 20%, #EC5A29 20%, #EC5A29 50%, transparent 50%);
   opacity: 0.0;
 }
+
+/* Swiper navigation arrows blancas */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff !important;
+  /* Si usas iconos SVG, también puedes forzar el fill */
+  fill: #fff !important;
+}
+
+/* Forzar flechas blancas en Swiper */
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #fff !important;
+  fill: #fff !important;
+  stroke: #fff !important;
+  /* Si usas Tailwind, puedes agregar también: */
+  /* @apply text-white !important; */
+}
+
+
+
