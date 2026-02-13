@@ -1,8 +1,14 @@
 "use client";
+
+import NProgress from "nprogress";
+import { toast } from "sonner";
+
 export default function ContactoPage() {
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+
+        NProgress.start();
 
         const formData = new FormData(e.currentTarget);
 
@@ -23,11 +29,12 @@ export default function ContactoPage() {
         });
 
         if (res.ok) {
-            alert("Consulta enviada 🚀");
+            toast.success("Correo enviado correctamente 📩");
             e.currentTarget.reset();
         } else {
-            alert("Error enviando la consulta");
+            toast.error("Error enviando la consulta");
         }
+        NProgress.done();
     };
 
 

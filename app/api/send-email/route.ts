@@ -14,10 +14,10 @@ export async function POST(req: Request) {
         });
 
         await transporter.sendMail({
-            from: `"DevCore Contacto" <${process.env.EMAIL_USER}>`,
+            from: `"CheckIT Contacto" <${process.env.EMAIL_USER}>`,
             to: process.env.EMAIL_USER,
             replyTo: email,
-            subject: `Nuevo proyecto - ${project_type || "Sin especificar"}`,
+            subject: `Nuevo proyecto - ${project_type || "CheckIT"}`,
             html: `
                 <h2>Nueva consulta de proyecto</h2>
                 <p><b>Nombre:</b> ${name}</p>
