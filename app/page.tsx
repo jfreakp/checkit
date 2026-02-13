@@ -1,5 +1,7 @@
 import CardEmpresas from "@/components/home/CardEmpresas";
 import Slider from "@/components/home/Slider";
+import { CardEnviarEncuesta } from "@/sharing/components/CardEnviarEncuesta";
+import { title } from "process";
 
 const itemsEmpresas = [
   {
@@ -15,6 +17,15 @@ const itemsEmpresas = [
     height: 50,
   }
 ]
+
+const infoCard = {
+    title1: "¿Listo para construir confianza?",
+    title2: "futuro",
+    title3: "de tu empresa?",
+    description: "Conversemos sobre cómo CheckTI puede ayudarte a escalar tus soluciones digitales con un equipo que entiende tus necesidades.",
+    primaryActionText: "Agendar Consultoría",
+    secondaryActionText: "Nuestra Metodología"
+};
 
 export default function Home() {
   return (
@@ -94,23 +105,17 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-24 relative overflow-hidden">
-        <div className="brand-wave-bottom"></div>
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-corporate-heading rounded-3xl p-10 md:p-20 text-center relative overflow-hidden shadow-2xl">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full -mr-48 -mt-48 blur-3xl"></div>
-            <div className="relative z-10">
-              <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-8 tracking-tight">¿Listo para construir el <span className="text-primary">futuro</span> de tu empresa?</h2>
-              <p className="text-gray-400 max-w-2xl mx-auto mb-12 text-lg md:text-xl">
-                Agenda una consultoría técnica con nuestros expertos para discutir los requerimientos de tu proyecto y recibir una propuesta detallada.
-              </p>
-              <button className="bg-primary text-white px-12 py-5 rounded-xl font-bold text-xl hover:scale-105 transition-transform shadow-2xl shadow-primary/40">
-                Get a Quote
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      
+      <CardEnviarEncuesta 
+        title1={infoCard.title1}
+        title2={infoCard.title2}
+        title3={infoCard.title3}
+        description={infoCard.description}
+        primaryActionText={infoCard.primaryActionText}
+        secondaryActionText={infoCard.secondaryActionText}
+      />
+
+
     </main>
   );
 }

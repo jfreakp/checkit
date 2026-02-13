@@ -1,3 +1,14 @@
+import { CardEnviarEncuesta } from "@/sharing/components/CardEnviarEncuesta";
+
+const infoCard = {
+    title1: "¿Listo para  ",
+    title2: "construir ",
+    title3: "confianza?",
+    description: "Conversemos sobre cómo CheckTI puede ayudarte a escalar tus soluciones digitales con un equipo que entiende tus necesidades.",
+    primaryActionText: "Agendar Consultoría",
+    secondaryActionText: "Nuestra Metodología"
+};
+
 export default function AboutPage() {
     return (
         <main className="flex-1">
@@ -143,24 +154,15 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
-            <section className="py-24 px-6 bg-background-light">
-                <div className="max-w-[1000px] mx-auto bg-dark-accent rounded-3xl p-16 text-center text-white relative overflow-hidden shadow-2xl">
-                    <div className="absolute -bottom-24 -left-24 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
-                    <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-                    <h2 className="text-4xl md:text-5xl font-black mb-6 relative z-10">¿Listo para construir confianza?</h2>
-                    <p className="text-white/70 mb-10 text-xl max-w-2xl mx-auto relative z-10">
-                        Conversemos sobre cómo CheckTI puede ayudarte a escalar tus soluciones digitales con un equipo que entiende tus necesidades.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
-                        <button className="bg-primary text-white font-bold px-10 py-5 rounded-xl hover:bg-primary/90 transition-all text-lg shadow-2xl shadow-primary/30">
-                            Agendar Consultoría
-                        </button>
-                        <button className="bg-white/10 text-white font-bold px-10 py-5 rounded-xl hover:bg-white/20 transition-all text-lg border border-white/20">
-                            Nuestra Metodología
-                        </button>
-                    </div>
-                </div>
-            </section>
+
+            <CardEnviarEncuesta
+                title1={infoCard.title1}
+                title2={infoCard.title2}
+                title3={infoCard.title3}
+                description={infoCard.description}
+                primaryActionText={infoCard.primaryActionText}
+                secondaryActionText={infoCard.secondaryActionText}
+            />
         </main>
     );
 }
