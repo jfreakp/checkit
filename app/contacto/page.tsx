@@ -66,7 +66,7 @@ export default function ContactoPage() {
                                 </div>
                                 <div>
                                     <p className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-1">Consultas Técnicas</p>
-                                    <p className="text-lg font-semibold text-gray-800">proyectos@devcore.com</p>
+                                    <p className="text-lg font-semibold text-gray-800">proyectos@checkit.com</p>
                                     <p className="text-sm text-gray-500">Recibe una estimación inicial en 24h</p>
                                 </div>
                             </div>
@@ -153,9 +153,12 @@ export default function ContactoPage() {
                             <label className="text-sm font-semibold text-gray-700" htmlFor="message">Alcance del Proyecto</label>
                             <textarea className="w-full px-4 py-3 rounded-xl border border-[#A6A6A6] bg-transparent focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-gray-900 form-input-custom resize-none" id="message" name="message" placeholder="Describe brevemente las funcionalidades clave que necesitas..." rows={4}></textarea>
                         </div>
-                        <button className="w-full bg-[#EC5A29] hover:bg-[#d44d21] text-white py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-primary/30 flex items-center justify-center gap-2 group" type="submit"
-                            disabled={loading}>
-                            Enviar Consulta
+                        <button
+                            type="submit"
+                            disabled={loading}
+                            className={`w-full bg-[#EC5A29] hover:bg-[#d44d21] text-white py-4 rounded-xl font-bold text-lg transition-all shadow-lg shadow-primary/30 flex items-center justify-center gap-2 group ${loading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                        >
+                            {loading ? 'Enviando...' : 'Enviar Consulta'}
                             <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">rocket_launch</span>
                         </button>
                     </form>
