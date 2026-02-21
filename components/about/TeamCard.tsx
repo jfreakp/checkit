@@ -6,19 +6,19 @@ const itemsCard = [
         name: "Fernando Elías Cueva Calderón",
         role: "Gerente",
         icon: "business_center",
-        image: "https://randomuser.me/api/portraits/men/47.jpg",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCX1Z-Vx_F66A1XXuBk5MBZAtaEZyo83M3cBsyEXTYHA7OD4liuSWSnjB4pqREHWTAiwYfD8IH9ePjbg_LbIqY_orhYBiTFzYsLa0ocjuHgIw-HqhBBxJPT3MDacPXGzizjzVCVgNWy0VYbz0qv3JNjAnkljHVeCr9t58rToMXpdIwT9id1GwAa7GNl1L6ifZ2006K6B3gKoQZJTQHVWYpvPVGMCopXf2-pv7wyiB0dOJ4DYN8i5UIjUDzYMeuVMqLRrzsTVo3lcFU",
     },
     {
         name: "Jorge Luis Bravo Fernandez",
         role: "Socio 1",
         icon: "groups",
-        image: "https://randomuser.me/api/portraits/men/48.jpg",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCX1Z-Vx_F66A1XXuBk5MBZAtaEZyo83M3cBsyEXTYHA7OD4liuSWSnjB4pqREHWTAiwYfD8IH9ePjbg_LbIqY_orhYBiTFzYsLa0ocjuHgIw-HqhBBxJPT3MDacPXGzizjzVCVgNWy0VYbz0qv3JNjAnkljHVeCr9t58rToMXpdIwT9id1GwAa7GNl1L6ifZ2006K6B3gKoQZJTQHVWYpvPVGMCopXf2-pv7wyiB0dOJ4DYN8i5UIjUDzYMeuVMqLRrzsTVo3lcFU",
     },
     {
         name: "Edwin Geovanny Cuenca Armijos",
         role: "Socio 2",
         icon: "groups",
-        image: "https://randomuser.me/api/portraits/men/49.jpg",
+        image: "https://lh3.googleusercontent.com/aida-public/AB6AXuCX1Z-Vx_F66A1XXuBk5MBZAtaEZyo83M3cBsyEXTYHA7OD4liuSWSnjB4pqREHWTAiwYfD8IH9ePjbg_LbIqY_orhYBiTFzYsLa0ocjuHgIw-HqhBBxJPT3MDacPXGzizjzVCVgNWy0VYbz0qv3JNjAnkljHVeCr9t58rToMXpdIwT9id1GwAa7GNl1L6ifZ2006K6B3gKoQZJTQHVWYpvPVGMCopXf2-pv7wyiB0dOJ4DYN8i5UIjUDzYMeuVMqLRrzsTVo3lcFU",
     },
 ]
 

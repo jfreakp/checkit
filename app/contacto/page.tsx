@@ -4,6 +4,45 @@ import NProgress from "nprogress";
 import React from "react";
 import { toast } from "sonner";
 
+const infoContacto = {
+    movil: "+593 0999513437",
+    email: "",
+    direccion: "Homero Idrobo 103-11 y José Jara - Cuidadela La Paz",
+    ciudad: "Loja, Ecuador",
+}
+
+const metadata = {
+    title: "Impulsa tu visión con software a medida",
+    description: "¿Tienes un proyecto en mente? Cuéntanos tus necesidades técnicas. Nuestro equipo de ingenieros está listo para transformar tus requerimientos en una solución escalable.",
+}
+
+const tipoProyectoOptions = [
+    { value: "web", label: "Desarrollo Web (SaaS)" },
+    { value: "mobile", label: "App Móvil (iOS/Android)" },
+    { value: "e-commerce", label: "E-commerce a Medida" },
+    { value: "ai-data", label: "IA & Data Science" },
+    { value: "legacy", label: "Modernización de Sistemas" },
+];
+
+const presupuestoOptions = [
+    { value: "5k-15k", label: "5.000$ - 15.000$" },
+    { value: "15k-50k", label: "15.000$ - 50.000$" },
+    { value: "50k-100k", label: "50.000$ - 100.000$" },
+    { value: "100k+", label: "+100.000$" },
+    { value: "not-defined", label: "No definido aún" },
+];
+
+const stackModerno = [
+    "React / Next.js",
+    "Node.js",
+    "AWS Cloud",
+    "Python / AI",
+    "Go / Microservicios",
+    "Docker / Kubernetes",
+    "CI/CD / DevOps",
+    "Flutter / React Native",
+];
+
 export default function ContactoPage() {
     const [loading, setLoading] = React.useState(false);
 
@@ -50,9 +89,9 @@ export default function ContactoPage() {
     return (
         <main className="flex-1 mx-auto max-w-[1200px] w-full px-6 md:px-20 lg:px-10 py-12 md:py-20">
             <div className="mb-16 text-center lg:text-left">
-                <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-4 text-gray-900 leading-tight">Impulsa tu visión con software a medida</h1>
-                <p className="text-lg text-gray-600 max-w-2xl">
-                    ¿Tienes un proyecto en mente? Cuéntanos tus necesidades técnicas. Nuestro equipo de ingenieros está listo para transformar tus requerimientos en una solución escalable.
+                <h1 className="text-4xl md:text-6xl font-black tracking-tight mb-4 text-gray-900 leading-tight">{metadata.title}</h1>
+                <p className="text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 text-justify">
+                    {metadata.description}
                 </p>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
@@ -76,7 +115,7 @@ export default function ContactoPage() {
                                 </div>
                                 <div>
                                     <p className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-1">Soporte Técnico</p>
-                                    <p className="text-lg font-semibold text-gray-800">+34 912 345 678</p>
+                                    <p className="text-lg font-semibold text-gray-800">{infoContacto.movil}</p>
                                     <p className="text-sm text-gray-500">Atención directa para partners</p>
                                 </div>
                             </div>
@@ -85,9 +124,9 @@ export default function ContactoPage() {
                                     <span className="material-symbols-outlined text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>location_on</span>
                                 </div>
                                 <div>
-                                    <p className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-1">Innovation Hub</p>
-                                    <p className="text-lg font-semibold text-gray-800">Paseo de la Castellana 95</p>
-                                    <p className="text-sm text-gray-500">Madrid, España</p>
+                                    <p className="text-sm font-bold uppercase tracking-wider text-gray-400 mb-1">CheckIT</p>
+                                    <p className="text-lg font-semibold text-gray-800">{infoContacto.direccion}</p>
+                                    <p className="text-sm text-gray-500">{infoContacto.ciudad}</p>
                                 </div>
                             </div>
                         </div>
@@ -104,10 +143,9 @@ export default function ContactoPage() {
                     <div className="pt-4">
                         <p className="text-xs font-bold text-gray-400 uppercase mb-4">Expertos en stack moderno</p>
                         <div className="flex flex-wrap gap-3">
-                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-semibold text-gray-600">React / Next.js</span>
-                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-semibold text-gray-600">Node.js</span>
-                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-semibold text-gray-600">AWS Cloud</span>
-                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-semibold text-gray-600">Python / AI</span>
+                            {stackModerno.map((tech) => (
+                                <span key={tech} className="px-3 py-1 bg-white border border-gray-200 rounded-full text-xs font-semibold text-gray-600">{tech}</span>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -129,23 +167,17 @@ export default function ContactoPage() {
                             <div className="space-y-2">
                                 <label className="text-sm font-semibold text-gray-700" htmlFor="project_type">Tipo de Proyecto</label>
                                 <select className="w-full px-4 py-3 rounded-xl border border-[#A6A6A6] bg-transparent focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-gray-900 form-input-custom" id="project_type" name="project_type">
-                                    <option value="">Seleccionar...</option>
-                                    <option value="web">Desarrollo Web (SaaS)</option>
-                                    <option value="mobile">App Móvil (iOS/Android)</option>
-                                    <option value="e-commerce">E-commerce a Medida</option>
-                                    <option value="ai-data">IA &amp; Data Science</option>
-                                    <option value="legacy">Modernización de Sistemas</option>
+                                    {tipoProyectoOptions.map((option) => (
+                                        <option key={option.value} value={option.value}>{option.label}</option>
+                                    ))}
                                 </select>
                             </div>
                             <div className="space-y-2">
                                 <label className="text-sm font-semibold text-gray-700" htmlFor="budget">Presupuesto Estimado</label>
                                 <select className="w-full px-4 py-3 rounded-xl border border-[#A6A6A6] bg-transparent focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all text-gray-900 form-input-custom" id="budget" name="budget">
-                                    <option value="">Rango de inversión...</option>
-                                    <option value="5k-15k">5.000€ - 15.000€</option>
-                                    <option value="15k-50k">15.000€ - 50.000€</option>
-                                    <option value="50k-100k">50.000€ - 100.000€</option>
-                                    <option value="100k+">+100.000€</option>
-                                    <option value="not-defined">No definido aún</option>
+                                    {presupuestoOptions.map((option) => (
+                                        <option key={option.value} value={option.value}>{option.label}</option>
+                                    ))}
                                 </select>
                             </div>
                         </div>
